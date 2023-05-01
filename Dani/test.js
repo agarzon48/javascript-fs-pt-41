@@ -1,3 +1,3 @@
 const prompt = require("prompt-sync")({sigint:true});
 
-const LEGAL_AGE
+const name = prompt ('¿Cómo te llamas? ')
