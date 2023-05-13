@@ -1,0 +1,25 @@
+.board {
+    height: 800px;
+    width: 800px;
+    background-color: aquamarine;
+    border: green 5px solid;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    height: 150px;
+    width: 120px;
+    background-color: blueviolet;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.hidden {
+    color: transparent;
+    cursor: pointer;
+}
