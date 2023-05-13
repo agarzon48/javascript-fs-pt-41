@@ -80,3 +80,59 @@ multipleDataArray[99] = "You've added some empty positions!";
 */
 
 multipleDataArray.forEach(element => console.log(element));
+
+/*
+    Detalle pro:
+
+    Cuando asignamos un array a una variable, no estamos almacenándola
+    como ocurría con los tipos primitivos (string, number, boolean, null,
+    undefined).
+
+    Los tipos primitivos ocupan un espacio predeterminado en la memoria
+    de la máquina. Pero, como hemos visto, cuando trabajamos con arrays
+    podemos alterar su longitud.
+
+    Por tanto, es posible que a lo largo de nuestras operaciones, la lista
+    ya no quepa en el espacio de memoria que tenía reservado y la máquina
+    tenga que moverla a un espacio más amplio.
+
+    Para poder gestionar esta incidencia, lo que guardamos en la variable
+    no es la propia lista, sino una referencia o dirección, que conocemos
+    como "puntero" (pointer).
+*/
+
+const myList = [1, 2, 3]; // myList contiene un puntero
+
+/*
+    Esto significa que, si asignamos la variable que contiene un puntero a
+    otra variable, en realidad lo que le estamos asignando es el puntero,
+    no una lista cuyo contenido es idéntico al de la lista original
+*/
+
+const secondList = myList; // secondList contiene el mismo puntero que myList
+
+/*
+    Como ahora ambas variables apuntan a LA MISMA lista, si hacemos cambios
+    a la lista desde una de ellas, se verán reflejados en la otra
+*/
+
+myList[0] = null;
+secondList[0] // Contiene null
+
+/*
+    Este no es el comportamiento deseado en la mayor parte de los casos.
+    Normalmente, si hacemos cambios en una variable no queremos que se
+    reflejen en la otra.
+
+    Por eso, la forma de resolverlo, es no asignar la misma lista, sino
+    crear una nueva. Es decir, trabajar sobre una copia de la lista original.
+
+    Podemos hacer esto con el spread operator.
+*/
+
+const listCopy = [...myList];
+
+listCopy[0] = 'Ahora los cambios están aislados';
+
+myList[0] // null
+listCopy[0] // 'Ahora los cambios están aislados'
