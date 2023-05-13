@@ -88,5 +88,3 @@ const myWebPage = createWebpage(null, compositeBody(
     createParagraph(mainText),
     createParagraph(secondaryText)
 ));
-
-console.log(myWebPage);
