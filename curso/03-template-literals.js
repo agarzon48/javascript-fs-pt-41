@@ -70,7 +70,7 @@ const createParagraph = (text) => `<p>${text}</p>`;
 
 const compositeBody = (...components) => `<main class="container">${components.join('\n')}</main>`;
 
-const createWebpage = (head, body) => ` ${/* Pasar a predefinidos */}
+const createWebpage = (head, body) => `
 <! DOCTYPE html>
 <html>
     <head>
