@@ -1,0 +1,15 @@
+.card {
+    background-color: #ffffff;
+    width: 100px;
+    height: 150px;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    
+}
+
+.active {
+    color: inherit;
+}
