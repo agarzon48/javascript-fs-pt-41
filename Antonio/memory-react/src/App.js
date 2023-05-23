@@ -1,4 +1,5 @@
 import Board from './components/Board/Board';
+import card from './components/Card/Card';
 import './App.css';
 
 

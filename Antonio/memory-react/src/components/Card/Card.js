@@ -4,18 +4,23 @@ import "./Card.css";
 
 
 const card = ({emoji}) => {
-    const [show, getShow] = useState(false)
+    const [show, setShow] = useState(false)
 
-}
+
 const flipCard = () => {
     
     setShow=(!show);
-    
-};
+}
+
+return <div className= {`card ${show ? "active" :``}`} onclick= {flipCard}
+
+}
 
 
 
-return (<div className={`card ${show ? "active" :``}`}> onclick = {showCard};
 
 
-export default Card;
+
+
+
+export default card;
